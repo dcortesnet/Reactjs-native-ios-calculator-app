@@ -1,4 +1,4 @@
-# Template de desarrollo React native mobile ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
+# React native IOS calculator app ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 
 > React Native
 
@@ -6,7 +6,9 @@
 
 > CI/CD
 
-Descripción del proyecto : Proyecto template de directrices para la estandarización de un proyecto, el objetivo del proyecto es que los desarrolladores puedan seguir la estructura conformada por este proyecto tanto como su archivo README, estructuras de carpeta estándar y su ciclo básico de CI/CD, con el motivo de mejorar y facilitar los tiempos de desarrollo y despliegue en cada uno de los proyectos.
+Descripción del proyecto : Calculadora básica IOS
+
+![cal-ios](./cal-ios.jpeg)
 
 ## Tabla de contenido
 
