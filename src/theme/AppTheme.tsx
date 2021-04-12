@@ -10,24 +10,15 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'flex-end'
   },
+  row: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    marginBottom: 18
+  },
   resultText: {
     color: 'white',
     fontSize: 60,
     textAlign: 'right'
-  },
-  button:{
-    height: 80,
-    width: 80,
-    borderRadius: 100,
-    backgroundColor: '#333333',
-    justifyContent: 'center',
-    alignContent: 'center',
-    alignItems: 'center'
-  },
-  buttonText: {
-    fontSize: 30,
-    color: 'white',
-    fontWeight: 'bold'
   }
 });
 
