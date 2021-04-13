@@ -5,20 +5,6 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: 'black',
     padding: 20
-  },
-  calculatorScreen: {
-    flex: 1,
-    justifyContent: 'flex-end'
-  },
-  row: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    marginBottom: 18
-  },
-  resultText: {
-    color: 'white',
-    fontSize: 60,
-    textAlign: 'right'
   }
 });
 

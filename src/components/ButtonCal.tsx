@@ -1,5 +1,5 @@
 import React from 'react'
-import { StyleSheet, Text, View } from 'react-native'
+import { StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 
 
 export interface Props {
@@ -7,13 +7,16 @@ export interface Props {
   color: string;
   backgroundColor: string;
   width?: number;
+  onPress?: () => void;
 }
 
-const ButtonCal: React.FC<Props> = ({text, color, backgroundColor, width=80})  =>{
+const ButtonCal: React.FC<Props> = ({text, color, backgroundColor, width=80, onPress})  =>{
   return (
-    <View style={[styles.button, {backgroundColor, width}]}>
-     <Text style={[styles.buttonText, {color}]}>{text}</Text>
-  </View>
+    <TouchableOpacity onPress={onPress}>
+      <View style={[styles.button, {backgroundColor, width}]}>
+        <Text style={[styles.buttonText, {color}]}>{text}</Text>
+      </View>
+    </TouchableOpacity>
   )
 }
 
