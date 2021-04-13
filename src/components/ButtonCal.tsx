@@ -6,11 +6,12 @@ export interface Props {
   text: string;
   color: string;
   backgroundColor: string;
+  width?: number;
 }
 
-const ButtonCal: React.FC<Props> = ({text, color, backgroundColor})  =>{
+const ButtonCal: React.FC<Props> = ({text, color, backgroundColor, width=80})  =>{
   return (
-    <View style={[styles.button, {backgroundColor}]}>
+    <View style={[styles.button, {backgroundColor, width}]}>
      <Text style={[styles.buttonText, {color}]}>{text}</Text>
   </View>
   )
@@ -19,7 +20,6 @@ const ButtonCal: React.FC<Props> = ({text, color, backgroundColor})  =>{
 const styles = StyleSheet.create({
   button:{
     height: 80,
-    width: 80,
     borderRadius: 100,
     justifyContent: 'center',
     alignContent: 'center',

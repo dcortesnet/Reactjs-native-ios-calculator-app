@@ -36,6 +36,12 @@ const CalculatorScreen = () => {
         <ButtonCal text={'+'} color={'white'} backgroundColor={'#FF9427'}/>
       </View>
 
+      <View style={styles.row}>
+        <ButtonCal width={160} text={'0'} color={'white'} backgroundColor={'#2D2D2D'}/>
+        <ButtonCal text={'.'} color={'white'} backgroundColor={'#2D2D2D'}/>
+        <ButtonCal text={'='} color={'white'} backgroundColor={'#FF9427'}/>
+      </View>
+
     </View>
   )
 }
