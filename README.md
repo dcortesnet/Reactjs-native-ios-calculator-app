@@ -8,7 +8,7 @@
 
 Descripción del proyecto : Calculadora básica IOS
 
-![cal-ios](./cal-ios.jpeg)
+<img width="200" alt="cal-ios" src="./cal-ios.jpeg">
 
 ## Tabla de contenido
 

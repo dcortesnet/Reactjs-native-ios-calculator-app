@@ -12,12 +12,52 @@ const CalculatorScreen = () => {
   }
 
   const buildNumber = (value: string) => {
-    if(resultNumber === '0'){
+
+    // Validación inicial remplaza el cero por un número
+    if(resultNumber === '0' && value !== '.' && value !== '-' && value !== 'del'){
       setResultNumber(value);
-    } else {
-      setResultNumber(resultNumber + value);
+      return;
     }
 
+    // Validación cantidad de digitos
+    if(resultNumber.length >= 8 && value !== 'del'){
+      return;
+    }
+
+    // Validación no aceptar doble punto
+    if(resultNumber.includes('.') && value === '.'){
+      return;
+    }
+
+    // Validación no aceptar doble cero inicial
+    if(resultNumber === '0' && value === '0'){
+      return;
+    }
+
+    switch(value){
+      case '-': {
+        if(resultNumber.startsWith('-')){
+          setResultNumber(resultNumber.slice(1));
+          return;
+        }
+        setResultNumber(value + resultNumber);
+        return;
+      }
+
+      case 'del': {
+        if(resultNumber.length === 1){
+          setResultNumber('0');
+          return;
+        }
+        setResultNumber(resultNumber.slice(0, resultNumber.length-1));
+        return;
+      }
+
+      default: {
+        setResultNumber(resultNumber + value);
+        return;
+      }
+    }
   }
 
   return (
@@ -28,8 +68,8 @@ const CalculatorScreen = () => {
 
       <View style={styles.row}>
         <ButtonCal text={'C'} color={'black'} backgroundColor={'#9B9B9B'} onPress={deleteNumber}/>
-        <ButtonCal text={'+/-'} color={'black'} backgroundColor={'#9B9B9B'}/>
-        <ButtonCal text={'del'} color={'black'} backgroundColor={'#9B9B9B'}/>
+        <ButtonCal text={'+/-'} color={'black'} backgroundColor={'#9B9B9B'} onPress={() => buildNumber('-')}/>
+        <ButtonCal text={'del'} color={'black'} backgroundColor={'#9B9B9B'} onPress={() => buildNumber('del')}/>
         <ButtonCal text={'/'} color={'white'} backgroundColor={'#FF9427'}/>
       </View>
 
@@ -56,7 +96,7 @@ const CalculatorScreen = () => {
 
       <View style={styles.row}>
         <ButtonCal width={160} text={'0'} color={'white'} backgroundColor={'#2D2D2D'} onPress={() => buildNumber('0')}/>
-        <ButtonCal text={'.'} color={'white'} backgroundColor={'#2D2D2D'} />
+        <ButtonCal text={'.'} color={'white'} backgroundColor={'#2D2D2D'} onPress={() => buildNumber('.')}/>
         <ButtonCal text={'='} color={'white'} backgroundColor={'#FF9427'}/>
       </View>
 
