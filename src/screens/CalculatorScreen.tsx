@@ -59,22 +59,52 @@ const CalculatorScreen = () => {
 
   const applyOperator = (value: string) => {
     saveResultNumber();
+
+    console.log(value);
+
     switch (value) {
       case '+': {
         operators.current = OperatorsEnum.sum;
+        break;
       }
       case '-': {
         operators.current = OperatorsEnum.subtraction;
+        break;
       }
       case 'x': {
         operators.current = OperatorsEnum.multiplication;
+        break;
       }
-
       case '/': {
         operators.current = OperatorsEnum.division;
+        break;
       }
 
       default:
+        break;
+    }
+  }
+
+  const calulateResult = () => {
+    switch(operators.current) {
+      case OperatorsEnum.sum: {
+        setResultNumber(String(Number(resultNumber) + Number(previusNumber)))
+        break;
+      }
+      case OperatorsEnum.subtraction: {
+        setResultNumber(String(Number(resultNumber) - Number(previusNumber)))
+        break;
+      }
+      case OperatorsEnum.multiplication: {
+        setResultNumber(String(Number(resultNumber) * Number(previusNumber)))
+        break;
+      }
+      case OperatorsEnum.division: {
+        setResultNumber(String(Number(resultNumber) / Number(previusNumber)))
+        break;
+      }
+      default:
+        return;
         break;
     }
   }
@@ -121,7 +151,7 @@ const CalculatorScreen = () => {
       <View style={styles.row}>
         <ButtonCal width={160} text={'0'} color={'white'} backgroundColor={'#2D2D2D'} onPress={() => buildNumber('0')}/>
         <ButtonCal text={'.'} color={'white'} backgroundColor={'#2D2D2D'} onPress={() => buildNumber('.')}/>
-        <ButtonCal text={'='} color={'white'} backgroundColor={'#FF9427'}/>
+        <ButtonCal text={'='} color={'white'} backgroundColor={'#FF9427'} onPress={() => calulateResult()}/>
       </View>
 
     </View>
