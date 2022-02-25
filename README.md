@@ -16,11 +16,6 @@ Descripción del proyecto : Calculadora básica IOS, se utiliza react native par
     - [Prerrequisitos](#prerrequisitos)
     - [Instalación](#instalación)
     - [Desarrollo](#desarrollo)
-- [Pruebas](#pruebas)
-    - [Test](#test)
-- [Documentación](#documentación)
-    - [Estructura](#estructura)
-    - [Conceptos](#conceptos)
 - [Equipo](#equipo)
 
 ## Comenzando
