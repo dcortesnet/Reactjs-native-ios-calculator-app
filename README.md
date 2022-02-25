@@ -6,7 +6,7 @@
 
 > CI/CD
 
-Descripción del proyecto : Calculadora básica IOS
+Descripción del proyecto : Calculadora básica IOS, se utiliza react native para su desarrollo junto con react hooks
 
 <img width="200" alt="cal-ios" src="./cal-ios.jpeg">
 
@@ -63,76 +63,6 @@ $ yarn run ios
 ```bash
 npx react-native start --reset-cache
 ```
-
-## Pruebas
-
-Las pruebas son necesarias para la construcción de nuevas funcionalidades dentro del proyecto, estas pruebas están ligadas a un ciclo de vida de CI/CD que se ejecutará al subir un nuevo cambio en las ramas, se aconseja ejecutar pruebas unitarias o de integración antes de subir una nueva funcionalidad al repositorio, esto es importante para evitar posibles errores en el futuro.
-
-## Test
-
-Ejecuta `yarn run test` para ejecutar las pruebas de todo el proyecto.
-
-```bash
-$ yarn run test
-```
-
-## Documentación
-
-A continuación se realizará una arquitectura establecida para los proyectos  junto a su convención de nombres y conceptos de ferencia. Arquitecturas recomendadas por el equipo de Agilesoft.
-
-## Estructura
-
-* Ideal para proyectos pequeños medianos
-* Se basa en la separación por contexto
-
-**Nota**: Toda la documentación para formar el repositorio actual se basa en la documentación oficial de React junto con sus buenas prácticas.
-
-* Referencias
-    * https://es.reactjs.org/docs/faq-structure.html
-
-```bash
-|-- src
-    |-- [+] services
-        |-- AuthService.ts
-        |-- UserService.ts
-        |-- EmployerService.ts
-
-    |-- [+] components
-        |-- AppBar.tsx
-        |-- AppFooter.tsx
-        |-- AppHeader.tsx
-
-    |-- [+] Screens
-        |-- EmployerListScreen.tsx
-        |-- EmployerCreateScreen.tsx
-        |-- HomeScreen.tsx
-
-    |-- [+] models
-        |-- Employer.ts
-        |-- User.ts
-
-|-- package.json
-|-- index.js
-|-- App.tsx
-```
-
-## Conceptos
-
-* **Components**
-   + Pieza de software personalizado y reutilizable compuesto por
-        * Una Vista
-        * Lógica
-
-* **Services**
-    + Mecanismo para compartir funcionalidad entre componentes
-    + Comúnmente consumen datos de una fuente externa
-
-* **Screens**
-    + Agrupación de pantallas generales
-
-* **Models**
-    + Estructura que representa en estricto rigor a una representación de un objeto del modelo de negocio
-
 ## Equipo
 
 Desarrollado por Diego Cortés
